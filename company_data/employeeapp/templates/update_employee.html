@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} update data page {% endblock %}
+
+{% block content %}
+
+<h1>Update Employee</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Employee</button>
+</form>
+
+<br>
+<a href="{% url 'home' %}">Back to Home</a>
+
+{% endblock %}
